@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { Component, component } from "react";
+import './App.css';
+import {Button,Form,FormGroup,Label,Input}
+from 'reactstrap';
+import {FacebookLoginButton }
+ from 'react-social-login-buttons';
+
+class App extends Component {
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Form className="login-form">
+     <h1>
+       <span className="font-weight-bold">Dinethrex </span> Login
+     </h1>
+     <h2 className="text-center">Hallo Machan!</h2>
+    
+     <FormGroup>
+       <Label>Email</Label>
+       <br/>
+       <Input type="email" placeholder="Email"/>  
+     </FormGroup>
+     <FormGroup>
+       <Label>Password</Label>
+       <br/>
+       <Input className="pr-20" type="password" placeholder="password"/>  
+     </FormGroup>
+     <Button className="btn-lg btn-dark btn-block">Login</Button>
+     <div className="text-center pt-3 ">Or continue with your social account</div>
+     <FacebookLoginButton className="mt-3 mb-3"/>
+     <a href="#" className=" sign text-center">Sign-Up</a>
+     <span className=" divider p-2">|</span>
+     <a href="#" className="text-center">Forgot Password?</a>
+    </Form>
+     
   );
 }
 
+}
+
 export default App;
+ 
